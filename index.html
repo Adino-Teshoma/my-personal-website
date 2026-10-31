@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
 <html >
 <head>
-    <title> My Personal Website</title>
+    <title>Adino - Personal Website</title>
 
     <link rel="stylesheet" href="style2.css">
 </head>
-<body>
 
+<body>
     <header>
-        <h2 class="logo">My Website</h2>
+        <h2 class="logo">ADINO.T</h2>
 
         <nav>
             <a href="#home">Home</a>
@@ -20,162 +21,84 @@
     <main>
 
         <section id="home" class="hero">
-            <h1>Welcome to My Personal Website</h1>
-            <p>Enter your information below.</p>
+
+            <h1>Welcome to My Website</h1>
+
+            <h2>Hi, I'm Adino Teshoma</h2>
+
+            <p>
+                I am a Computer Science student
+                interested in Programming and Technology.
+            </p>
+
+            <p>
+                My goal is to become a professional Coder.
+            </p>
+
+            <a href="#about">
+                <button type="button">Learn More</button>
+            </a>
+
         </section>
+
 
         <section id="about" class="card">
-            <h2>My Information</h2>
 
-            <form id="personalForm">
+            <h2>About Me</h2>
 
-                <label for="name">Full Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                >
+            <p>
+                Hello! My name is Adino Teshoma.
+            </p>
 
-                <label for="department">Department</label>
-                <input
-                    type="text"
-                    id="department"
-                    placeholder="Enter department"
-                    required
-                >
+            <p>
+                I am a Computer Science student.
+            </p>
 
-                <label for="batch">Batch</label>
-                <input
-                    type="text"
-                    id="batch"
-                    placeholder="Enter batch"
-                    required
-                >
-<label for="country">My country</label>
-<input type="text"
-id = "country"
-placeholder="Enter country"required>
-                <label for="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter email"
-                >
+            <p><strong>Department:</strong> Computer Science</p>
 
-                <label for="goal">My Goal</label>
-                <input
-                    type="text"
-                    id="goal"
-                    placeholder="Enter  goal"
-                    required
-                >
-<label for="idno">My idno</label>
-<input type="text"
-id ="idno"
-placeholder="Enter idno" required>
-                <label for="sex">My Sex</label>
-                <select id="sex" required>
-                    <option value="">Select sex</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
+            <p><strong>Batch:</strong> 3rd Batch</p>
 
-                <button type="submit">Submit</button>
-                <button type="reset" class="clear-button">Clear</button>
+            <p><strong>Country:</strong> Ethiopia</p>
 
-            </form>
+            <p><strong>My Goal:</strong> Professional Coder</p>
+
+            <h2>My Interests</h2>
+
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>Artificial Intelligence</p>
+            <p>Computer Science</p>
+
         </section>
 
-        <section id="resultSection" class="card" hidden>
-            <h2>My Profile</h2>
-
-            <p><strong>Full Name:</strong>
-            <span id="showName"></span>
-            </p>
-
-            <p><strong>Department:</strong>
-                <span id="showDepartment"></span>
-            </p>
-
-            <p><strong>Batch:</strong>
-                <span id="showBatch"></span>
-            </p>
-
- <p><strong>Country:</strong>
-                <span id="showCountry"></span>
-                
-            <p><strong>Email:</strong>
-                <span id="showEmail"></span>
-            </p>
-
-            <p><strong>My Goal:</strong>
-                <span id="showGoal"></span>
-            </p>
-
-            <p><strong>My Sex:</strong>
-                <span id="showSex"></span>
-            </p>
-             <p><strong>My Idno:</strong>
-                <span id="showIdno"></span>
-            </p>
-        </section>
 
         <section id="contact" class="card">
-            <h2>About This Website</h2>
-            <p>This is my personal website project.</p>
+
+            <h2>Contact</h2>
+
             <p>
-                I am learning HTML, CSS, JavaScript and Cybersecurity.
+                Welcome to my personal website.
             </p>
+
+            <p>
+                Thank you for visiting my website!
+            </p>
+
         </section>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 My Personal Website</p>
+
+        <p>
+            &copy; 2026 Adino Teshoma.
+            All Rights Reserved.
+        </p>
+
     </footer>
-
-    <script>
-        const form = document.getElementById("personalForm");
-
-        form.addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            // Get values from the form
-            const name = document.getElementById("name").value.trim();
-            const department = document.getElementById("department").value.trim();
-            const batch = document.getElementById("batch").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const goal = document.getElementById("goal").value.trim();
-            const sex = document.getElementById("sex").value;
-            const country = document.getElementById("country").value;
-            const idno = document.getElementById("idno").value;
-            // Display information in My Profile
-            document.getElementById("showName").textContent = name;
-            document.getElementById("showDepartment").textContent = department;
-            document.getElementById("showBatch").textContent = batch;
-            document.getElementById("showEmail").textContent =
-                email || "Not provided";
-            document.getElementById("showGoal").textContent = goal;
-            document.getElementById("showSex").textContent = sex;
-            document.getElementById("showCountry").textContent = country;
-           document.getElementById("showIdno").textContent = idno;           
-            // Show the profile section
-            document.getElementById("resultSection").hidden = false;
-
-            // Scroll to the profile
-            document.getElementById("resultSection").scrollIntoView({
-                behavior: "smooth"
-            });
-
-        });
-
-        // Clear the form and hide the profile
-        form.addEventListener("reset", function() {
-            document.getElementById("resultSection").hidden = true;
-        });
-    </script>
 
 </body>
 </html>
