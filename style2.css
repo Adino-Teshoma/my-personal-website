@@ -5,122 +5,235 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #222;
+    background-color: #0b1120;
+    color: #f1f5f9;
     line-height: 1.6;
 }
 
+
 header {
-    background-color: #123456;
-    color: white;
-    padding: 20px;
+    background-color: #111c35;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 15px;
+    border-bottom: 1px solid #263653;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
-    font-size: 24px;
+    color: #60a5fa;
+    font-size: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 8px;
+    margin-left: 18px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #60a5fa;
 }
 
-main {
-    max-width: 800px;
-    margin: 25px auto;
-    padding: 0 15px;
-}
 
 .hero {
-    background-color: #dbeafe;
     text-align: center;
-    padding: 35px 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    padding: 85px 20px;
+    background: linear-gradient(
+        135deg,
+        #111c35,
+        #0b1120
+    );
 }
 
+.hero h1 {
+    color: #60a5fa;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+/* =========================
+   4. CARD DESIGN
+========================= */
+
 .card {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #00000015;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #111c35;
+    border: 1px solid #263653;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #60a5fa;
+    transform: translateY(-3px);
 }
 
 .card h2 {
-    margin-bottom: 15px;
-    color: #123456;
+    color: #60a5fa;
+    margin-bottom: 20px;
 }
 
-form label {
+
+
+label {
     display: block;
-    margin-top: 12px;
-    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #cbd5e1;
 }
 
-form input,
-form select {
+input,
+textarea,
+select {
     width: 100%;
     padding: 12px;
-    margin-top: 5px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
+    background-color: #0b1120;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 6px;
     font-size: 16px;
+    font-family: Arial, sans-serif;
 }
 
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #60a5fa;
+    border-color: #60a5fa;
+}
+
+input[type="file"] {
+    padding: 10px;
+}
+
+
+
 button {
-    background-color: #123456;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2563eb;
     color: white;
     border: none;
-    padding: 12px 20px;
-    margin-top: 18px;
-    margin-right: 8px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #2563eb;
+    background-color: #1d4ed8;
+    transform: scale(1.03);
 }
 
 .clear-button {
-    background-color: #666;
+    background-color: #475569;
+    margin-left: 8px;
 }
+
+.clear-button:hover {
+    background-color: #334155;
+}
+
+
+
+.card a {
+    display: inline-block;
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+#contactStatus,
+#feedbackStatus {
+    margin-top: 15px;
+    color: #60a5fa;
+    overflow-wrap: anywhere;
+}
+
+
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #123456;
-    color: white;
+    padding: 25px;
+    margin-top: 40px;
+    background-color: #111c35;
+    color: #94a3b8;
 }
 
-@media (max-width: 600px) {
+
+
+[hidden] {
+    display: none !important;
+}
+
+
+@media (max-width: 650px) {
+
     header {
         flex-direction: column;
-    }
-
-    nav a {
-        margin: 0 5px;
-    }
-
-    .card {
+        text-align: center;
         padding: 18px;
     }
 
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        padding: 55px 15px;
+    }
+
     .hero h1 {
-        font-size: 26px;
+        font-size: 25px;
+    }
+
+    .card {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    button {
+        max-width: 100%;
     }
 }
